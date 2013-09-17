@@ -12,17 +12,21 @@
 	<script type="text/javascript" src="proglangs.js"></script>
 	-->
 	
+	
+	
 </head>
 
 <body>
 
 <!-- Navigerings meny -->
-<ul class="navbar">
+<ul class="navbar" >
 	<li><a href="index.html">Hjem</a>
-	<li><a href="kronologisk.html">Kronologik</a>
-	<li><a href="Hierarkisk.html">Hierarkisk</a>
-	<li><a href= "Alfabetisk.html"> Alfabetisk</a>
+	<li><a href="" onclick="myFunction()">Kronologik</a>
+	<li><a href="" onclick="myFunction()">Hierarkisk</a>
+	<li><a href="" onclick="myFunction()"> Alfabetisk</a>
 	</ul>
+	
+
 	
 	<!-- hoved innhold -->
 	<h1>Programmeringsspråk</h1>
@@ -34,9 +38,7 @@
 		<!--ord som blir vist når intet språk er selektert -->
 		<label for="proglangs"> Velg:</label>
 		
-		<!-- class/css, ID/script, name/egennavn,  
-		<select class="text_select" id="myList" name="proglansdrop" onchange="proglangs()" style="width: 120px">
-		-->
+		<!-- name/egennavn, id/ved bruk av script,  -->
 		<select name="select-pl" id="proglangs" onChange="printToOutputBox(this)">
 
 		
