@@ -2,8 +2,8 @@ body {
 	/*Setter design for innhold i html body*/
 	padding-left: 11em;
 	font-family: georgia, "times new roman", times, serif;
-	color: purple;
-	background-color: #d8da3d; }
+	color: white;
+	background-color: #025167; }
 	
 	/*Reserverer venstre felt for menyen*/
 ul.navbar {
@@ -22,10 +22,10 @@ h1 {	font-family: helvetica, geneva, arial,
 	/*Oppretter en klasse kalt "navbar" som kan benyttes
 	av li elementer i ul*/
 ul.navbar li {
-	background: white;
+	background: #61B7CF;
 	margin: 0.5em 0;
 	padding: 0.3em;
-	border-right: 1em solid black }
+	border-right: 1em solid #057D9F }
 	
 	/*fjerner understrek på lenker som ellers er standard
 	i html. Kun i ul taggen*/
@@ -34,7 +34,7 @@ ul.navbar a {
 	 
 	 /*setter farge på samtlige lenker*/
 a:link {
-	color: blue; }
+	color: white; }
 	
 	/*setter farge på samtlige besøkte lenker*/
 a:visited {
