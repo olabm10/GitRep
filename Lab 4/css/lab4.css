@@ -1,0 +1,65 @@
+/*
+Setter margin og padding til 0, etter som det er vanlig med en satt
+verdi i nettleseren
+*/
+
+body	{
+	margin:0;
+	padding:0;
+	}
+
+#body-container	{
+	width:415px;
+	height: 500px;
+	margin: 0 auto;
+	border:1px solid #3285ef;
+	}
+
+#body-container .glossary-container {
+	clear: both; /*elementer vil ikke flyte??*/
+	}
+	
+#body-container .content-container {
+	height: 430px; /*Setter klonstant høyde på conten-container*/
+	width: 415px; /*setter konstant bredde på conten-container*/
+	overflow: auto; /*scrolling*/
+	font-family: 'Arial',Verdana,Tahoma; /*skrift*/
+	font-size: 10pt; /* Skrift størrelse*/
+	clear: both; /*Elementer vil ikke flyte*/
+	}
+	
+#body-container .content-container div {
+	padding-left: 10px;
+	border-bottom: 1px #666666 solid;
+	}
+	
+#body-container .content-container p.return-to-top{
+	color: #0066FF;
+	text-decoration: underline;
+	text-align: right;
+	margin-right:10px;
+	cursor: pointer;
+	}
+	
+.firstUL {
+	padding: 0px 0px 0px 10px;	/**/
+	margin: 0px;	/*marg tykkelse*/
+	background-color: #3285ef; /*bakgrunnsfarge*/
+	}
+	
+.firstUL li{
+	background: transparent url(../img/link_sprite_img.jpg) no-repeat scroll 0 0;
+	display: inline;
+	font-family: 'Arial',Verdana,Tahoma;
+	font-size: 16pt;
+	padding: 10px 15px 22px;
+	line-height: 70px;
+	cursor: pointer;
+	}
+	
+.firstUL li.selected {
+	background: transparent url(../img/link_sprite_img.jpg) no-repeat scroll 0px -57px;
+	color: #ffffff;
+	font-weight: bold;
+	}
+	

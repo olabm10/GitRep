@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Lab4 alfabetisk liste</title>
+	<!-- jQuery javascript bibliotek-->
+	<script src="js/jquery-1.8.1.js"></script>
+	<script src="js/jquery.scrollTo-1.4.7.js"></script>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/lab4.css" />
+	
+	<script>
+	$(function()	{
+	
+	
+		//jQuery funkson
+		$(".firstUL li").each(function()	{
+			$(this).click(function() { //registrerer når bruker klikker på en av boksene
+				$(".firstUL li").removeClass("selected"); //
+				$(this).addClass("selected");//
+				elementClick = $( this ).attr("id");//
+				
+				//Automatisk scrolling til valgt DOM element
+				$(".content-container").scrollTo($("#content-for-"+elementClick),800);
+				
+				//Endre bakgrunnsfarge
+				$(".conten-container div").css({'background-color' : '#ffffff'} );
+				$(".content-container #content-for-"+elementClick).css({'background-color' : '#d2e2fc'});
+			});	
+		});
+		
+			//A markeres når man trykker på "Tilbake til topp" knappen
+			$('.return-to-top').click(function()	{
+				$(".firstUL li").each(function()	{
+					$(".firstUL li").removeClass("selected");
+				});
+				
+				//Legg til klassen selected til første bokstav i alfabetet
+				$("#a").addClass("selected");
+				//Scroller til et element. Her A.
+				$(".content.container").scrollTo($("content-for-a"),800);
+				//Bakgrunnsfargen til blå for selektert div og hvit til resten.
+				$(".content-container div").css({'background-color' : '#ffffff'} );
+				$(".content-container #content-for-a").css({'background-color' : '#d2e2fc'});
+			});
+		});
+		
+	</script>
+	
+</head>
+<body>
+
+<div id="body-container">
+
+	<div class="glossary-container">
+		<ul class="firstUL">
+			<li id="a" class="selected">A</li>
+			<li id="b">B</li>
+			<li id="c">C</li>
+			<li id="d">D</li>
+		</ul>
+	</div>
+	
+	<div class="content-container">
+		<!-- A -->
+		<div id="content-for-a" style="background-color:#d2e2fc">
+			<!-- Innhold i A -->
+			<dl>
+				<dt>ActionScript</dt>
+					<dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+					magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+					et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+					no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </dd>
+				<dt>AppleScript</dt>
+					<dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+					magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+					et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+					no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </dd>
+			</dl>
+		</div>
+		
+		<!-- B -->
+		<div id="content-for-b">
+			<!-- innhold i B -->
+			<dl>
+				<dt>Ett skript</dt>
+					<dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+					magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+					et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+					no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  </dd>
+			</dl>
+		</div>
+		
+		<!-- C -->
+		<div id="content-for-c">
+			<!-- innhold i C -->
+			<dl>
+				<dt>Ett skript</dt>
+					<dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+					magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+					et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+					no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </dd>
+			</dl>
+		</div>
+		
+		<!-- D -->
+		<div id="content-for-d">
+			<!-- innhold i D -->
+			<dl>
+				<dt>Ett skript</dt>
+					<dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+					sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+					magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+					et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+					no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, </dd>
+			</dl>
+			<p class="return-to-top">Tilbake til toppen</p>
+		</div>
+	</div>
+</div> 
+
+
+<address>Laget 17. Oktober 2013<br>av Ola</address>	
+
+</body>
+</html>
+	
